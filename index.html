@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +15,27 @@
     <header>
         <div class="container">
             <div class="logo">
-                <span class="logo-icon">T</span>
-                <span class="logo-text">ommy Doan</span>
+                <a href="https://tommydoan.github.io/portfoliotommydoan/"><span class="logo-icon">T</span></a><span class="logo-text">ommy Doan</span>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills-education">Skills & Education</a></li>
-                    <li><a href="#programming-languages">Programming Languages</a></li>
-                    <li><a href="#my-channels">My Channels</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" class="active" data-i18n="Home">Trang Chủ</a></li>
+                    <li><a href="#about" data-i18n="Introduce">Giới Thiệu</a></li>
+                    <li><a href="#projects" data-i18n="Projects">Dự Án</a></li>
+                    <li><a href="#skills-education" data-i18n="Level">Trình Độ</a></li>
+                    <li><a href="#programming-languages" data-i18n="Programming">Lập Trình</a></li>
+                    <li><a href="#my-channels" data-i18n="Channel">Kênh</a></li>
+                    <li><a href="#contact" data-i18n="Contact">Liên Hệ</a></li>
                 </ul>
             </nav>
+            <div class="settings-buttons">
+                <button id="theme-toggle">
+                    <i class="fas fa-moon"></i> <i class="fas fa-sun" style="display: none;"></i>
+                </button>
+                <button id="language-toggle">
+                    <span class="lang-vi active">VI</span> | <span class="lang-en">EN</span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -41,26 +48,26 @@
         <div class="particle" style="--x: -15px; --y: 5px;"></div>
         <div class="particle" style="--x: 5px; --y: -25px;"></div>
 
-        <h1>Đoàn Công Minh</h1>
-        <p class="subheading">Web Developer & Hardware Enthusiast</p>
-        <p class="description">Sinh viên IT năng động, đam mê giải quyết vấn đề và khám phá công nghệ.</p>
+        <h1 data-i18n="homeHeading">Đoàn Công Minh</h1>
+        <p class="subheading" data-i18n="homeSubheading">Web Developer & Hardware Engineer</p>
+        <p class="description" data-i18n="homeDescription">Sinh viên IT năng động, đam mê giải quyết vấn đề và khám phá công nghệ.</p>
         <div class="hero-buttons">
-            <a href="#projects" class="button primary">Xem dự án</a>
-            <a href="#about" class="button secondary">Tìm hiểu thêm</a>
+            <a href="#projects" class="button primary" data-i18n="homeProjectButton">Xem dự án</a>
+            <a href="#about" class="button secondary" data-i18n="homeAboutButton">Tìm hiểu thêm</a>
         </div>
     </section>
 
     <section id="about" class="section bg-light">
         <div class="container">
-            <h2 id="about-title" class="section-title">Về tôi</h2>
+            <h2 id="about-title" class="section-title" data-i18n="introduce">Giới Thiệu</h2>
             <div class="about-content">
                 <div class="about-image" data-aos="fade-right">
                     <img src="images/avt1.jpg" alt="Hình ảnh của Đoàn Công Minh">
                 </div>
                 <div class="about-text" data-aos="fade-left">
-                    <p>Xin chào! Tôi là Đoàn Công Minh, một sinh viên năm 2 chuyên ngành Công nghệ Thông tin tại Đại học Nam Cần Thơ. Tôi có niềm đam mê đặc biệt với lĩnh vực phát triển web và khám phá thế giới phần cứng. Tôi luôn tìm kiếm những thử thách mới để rèn luyện kỹ năng và áp dụng kiến thức đã học vào các dự án thực tế.</p>
-                    <p>Trong lĩnh vực phát triển web, tôi tập trung vào việc xây dựng các trang web hiện đại, responsive và thân thiện với người dùng. Tôi có kiến thức về HTML, CSS, JavaScript và đang học hỏi thêm về các framework và thư viện phổ biến.</p>
-                    <p>Đối với phần cứng, tôi thích tìm hiểu về cách các thiết bị hoạt động, mày mò với Arduino và các dự án điện tử sáng tạo khác. Sự kết hợp giữa phần mềm và phần cứng mang đến cho tôi những ý tưởng độc đáo và thú vị.</p>
+                    <p data-i18n="aboutText1">Xin chào! Tôi là Đoàn Công Minh, một sinh viên năm 2 chuyên ngành Công nghệ Thông tin tại Đại học Nam Cần Thơ. Tôi có niềm đam mê đặc biệt với lĩnh vực phát triển web và khám phá thế giới phần cứng. Tôi luôn tìm kiếm những thử thách mới để rèn luyện kỹ năng và áp dụng kiến thức đã học vào các dự án thực tế.</p>
+                    <p data-i18n="aboutText2">Trong lĩnh vực phát triển web, tôi tập trung vào việc xây dựng các trang web hiện đại, responsive và thân thiện với người dùng. Tôi có kiến thức về HTML, CSS, JavaScript và đang học hỏi thêm về các framework và thư viện phổ biến.</p>
+                    <p data-i18n="aboutText3">Đối với phần cứng, tôi thích tìm hiểu về cách các thiết bị hoạt động, mày mò với Arduino và các dự án điện tử sáng tạo khác. Sự kết hợp giữa phần mềm và phần cứng mang đến cho tôi những ý tưởng độc đáo và thú vị.</p>
                 </div>
             </div>
         </div>
@@ -68,54 +75,54 @@
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Dự án</h2>
+            <h2 class="section-title" data-i18n="projects">Dự án</h2>
             <div class="projects-grid">
                 <div class="project-item" data-aos="fade-left">
                     <div class="project-image" style="background-image: url('images/pcb.jpg');"></div>
                     <div class="project-info">
-                        <h4>Printed Circuit Board</h4>
+                        <h4 data-i18n="project1Title">Bảng Mạch In</h4>
                         <p class="tech">Proteus</p>
-                        <button class="button small expand-button">Xem chi tiết</button>
+                        <button class="button small expand-button" data-i18n="project1Button">Xem chi tiết</button>
                     </div>
                     <div class="project-details">
-                        <p>Đây là mô tả chi tiết về nền tảng thương mại điện tử này.</p>
+                        <p data-i18n="project1Details">Đây là mô tả chi tiết về nền tảng thương mại điện tử này.</p>
                         <ul>
-                            <li>Thiết kế và chế tạo bảng:</li>
-                            <li>Bảng treo quần áo tự động có cảm biến ánh sáng</li>
-                            <li>Bảng đèn nháy kiểu cảnh sát</li>
-                            <li>Bảng khuếch đại âm thanh</li>
+                            <li data-i18n="project1Detail1">Thiết kế và chế tạo bảng:</li>
+                            <li data-i18n="project1Detail2">Bảng treo quần áo tự động có cảm biến ánh sáng</li>
+                            <li data-i18n="project1Detail3">Bảng đèn nháy kiểu cảnh sát</li>
+                            <li data-i18n="project1Detail4">Bảng khuếch đại âm thanh</li>
                         </ul>
                     </div>
                 </div>
                 <div class="project-item" data-aos="fade-right" data-aos-delay="100">
                     <div class="project-image" style="background-image: url('images/dogcar.jpg');"></div>
                     <div class="project-info">
-                        <h4>Dog Carbot</h4>
+                        <h4 data-i18n="project2Title">Dog Carbot</h4>
                         <p class="tech">C++, Arduino, AutoCAD, CorelDraw</p>
-                        <button class="button small expand-button">Xem chi tiết</button>
+                        <button class="button small expand-button" data-i18n="project2Button">Xem chi tiết</button>
                     </div>
                     <div class="project-details">
-                        <p>Đây là mô tả chi tiết về robot Dog Carbot.</p>
+                        <p data-i18n="project2Details">Đây là mô tả chi tiết về robot Dog Carbot.</p>
                         <ul>
-                            <li>Bộ vi điều khiển: Arduino Mega</li>
-                            <li>Firmware: lập trình C++ cho Arduino Uno R3, sử dụng HC 05 để kết nối điện thoại di động qua bluetooth, bánh xe mecanum giúp xe di chuyển nhẹ nhàng</li>
-                            <li>Sofware: sử dụng ứng dụng trên CH Play "Bluetooth RC Car"</li>
+                            <li data-i18n="project2Detail1">Bộ vi điều khiển: Arduino Mega</li>
+                            <li data-i18n="project2Detail2">Firmware: lập trình C++ cho Arduino Uno R3, sử dụng HC 05 để kết nối điện thoại di động qua bluetooth, bánh xe mecanum giúp xe di chuyển nhẹ nhàng</li>
+                            <li data-i18n="project2Detail3">Sofware: sử dụng ứng dụng trên CH Play "Bluetooth RC Car"</li>
                         </ul>
                     </div>
                 </div>
                 <div class="project-item" data-aos="fade-left" data-aos-delay="200">
                     <div class="project-image" style="background-image: url('images/smartcan.jpg');"></div>
                     <div class="project-info">
-                        <h4>Smart Trash Can</h4>
+                        <h4 data-i18n="project3Title">Thùng Rác Thông Minh</h4>
                         <p class="tech">Arduino, C++, Sensors</p>
-                        <button class="button small expand-button">Xem chi tiết</button>
+                        <button class="button small expand-button" data-i18n="project3Button">Xem chi tiết</button>
                     </div>
                     <div class="project-details">
-                        <p>Đây là mô tả chi tiết về thùng rác thông minh.</p>
+                        <p data-i18n="project3Details">Đây là mô tả chi tiết về thùng rác thông minh.</p>
                         <ul>
-                            <li>Cảm biến khoảng cách: có thể phát hiện người trong phạm vi 20cm và tự động mở nắp</li>
-                            <li>Cơ cấu phân loại: có chức năng báo đầy rác</li>
-                            <li>Tiện ích: có loa tuyên truyền bảo vệ môi trường</li>
+                            <li data-i18n="project3Detail1">Cảm biến khoảng cách: có thể phát hiện người trong phạm vi 20cm và tự động mở nắp</li>
+                            <li data-i18n="project3Detail2">Cơ cấu phân loại: có chức năng báo đầy rác</li>
+                            <li data-i18n="project3Detail3">Tiện ích: có loa tuyên truyền bảo vệ môi trường</li>
                         </ul>
                     </div>
                 </div>
@@ -123,86 +130,88 @@
         </div>
     </section>
 
-    <section id="skills-education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Skills & Education</h2>
-            <div class="skills-education-grid">
-                <div class="education-list">
-                    <h3>Education</h3>
-                    <div class="education-item" data-aos="fade-up">
-                        <h4>Nam Can Tho University</h4>
-                        <p class="degree">Information Technology Engineer (2022 - Present)</p>
-                        <p class="details">Faculty of Information and Communication Technology</p>
+    <section id="skills-education" class="section">
+        <div class="section-title">
+            <h2 data-i18n="level">Trình Độ</h2>
+        </div>
+        <div class="section-content">
+            <div class="education-section"  data-aos="fade-right" data-aos-duration="800">
+                <h3 data-i18n="myEducation">Giáo Dục</h3>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <h4 data-i18n="eduNCTU">Trường Đại học Nam Cần Thơ</h4>
+                        <p class="degree" data-i18n="eduNCTUInfo">Kỹ sư Công nghệ thông tin</p>
+                        <p class="details" data-i18n="eduNCTUTime">Khoa Công nghệ thông tin và truyền thông (2022 - Hiện tại)</p>
                     </div>
-                    <div class="education-item" data-aos="fade-up" data-aos-delay="100">
-                        <h4>B1 Certificate</h4>
-                        <p class="degree">Issued by Can Tho University (2025)</p>
-                        <p class="details">A certificate indicating English language proficiency at level B1.</p>
+                    <div class="education-item">
+                        <h4 data-i18n="eduB1">Chứng chỉ B1</h4>
+                        <p class="degree" data-i18n="eduB1Info">Được cấp bởi Đại học Cần Thơ</p>
+                        <p class="details" data-i18n="eduB1Time">Chứng chỉ chứng minh trình độ tiếng Anh ở trình độ B1. (2025)</p>
                     </div>
-                    <div class="education-item" data-aos="fade-up" data-aos-delay="200">
-                        <h4>Excellent Soft Skills Certificate</h4>
-                        <p class="degree">Issued by Nam Can Tho University (2025)</p>
+                    <div class="education-item">
+                        <h4 data-i18n="eduSoftSkill">Chứng chỉ Kỹ năng mềm loại giỏi</h4>
+                        <p class="degree" data-i18n="eduSoftSkillInfo">Được cấp bởi Trường Đại học Nam Cần Thơ</p>
+                        <p class="details" data-i18n="eduSoftSkillTime">(2025)</p>
                     </div>
                 </div>
-
-                <div class="other-skills">
-                    <h3>Skills</h3>
-                    <ul class="skill-list">
-                        <li>Reading Datasheet</li>
-                        <li>Register Definition</li>
-                        <li>Bootloader</li>
-                        <li>Team work</li>
-                        <li>Process Working</li>
-                        <li>Communication Skills</li>
-                    </ul>
-                </div>
+            </div>
+            <div class="skills-section" data-aos="fade-left" data-aos-duration="800">
+                <h3 data-i18n="mySkills">Kỹ Năng</h3>
+                <ul class="skill-list">
+                    <li data-i18n="skillDatasheet"><span>✔</span> Đọc Datasheet</li>
+                    <li data-i18n="skillTeamwork"><span>✔</span> Làm việc nhóm</li>
+                    <li data-i18n="skillProblemSolving"><span>✔</span> Tư duy & Giải quyết vấn đề</li>
+                    <li data-i18n="skillCommunication"><span>✔</span> Kỹ năng giao tiếp</li>
+                    <li data-i18n="skillPresentation"><span>✔</span> Kỹ năng thuyết trình</li>
+                </ul>
             </div>
         </div>
     </section>
 
+
     <section id="programming-languages" class="section bg-light">
         <div class="container">
-            <h2 class="programming-languages-title">Programming Languages</h2>
+            <h2 class="programming-languages-title" data-i18n="programming">Lập Trình</h2>
             <div class="language-grid">
                 <div class="language-item">
-                    <h4>C++</h4>
+                    <h4 data-i18n="langCPlusPlus">C++</h4>
                     <img src="images/c++.png" alt="C++">
-                    <span class="level">Sophomore</span>
+                    <span class="level" data-i18n="levelJunior">Junior</span>
                 </div>
                 <div class="language-item">
-                    <h4>React</h4>
+                    <h4 data-i18n="langReact">React</h4>
                     <img src="images/react.png" alt="React">
-                    <span class="level">Sophomore</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
                 <div class="language-item">
-                    <h4>React Native</h4>
+                    <h4 data-i18n="langReactNative">React Native</h4>
                     <img src="images/reactnative.png" alt="React Native">
-                    <span class="level">Sophomore</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
                 <div class="language-item">
-                    <h4>Python</h4>
+                    <h4 data-i18n="langPython">Python</h4>
                     <img src="images/python.png" alt="Python">
-                    <span class="level">Fresher</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
                 <div class="language-item">
-                    <h4>HTML</h4>
+                    <h4 data-i18n="langHTML">HTML</h4>
                     <img src="images/html.png" alt="HTML">
-                    <span class="level">Sophomore</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
                 <div class="language-item">
-                    <h4>MySQL</h4>
+                    <h4 data-i18n="langMySQL">MySQL</h4>
                     <img src="images/mysql.png" alt="MySQL">
-                    <span class="level">Sophomore</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
                 <div class="language-item">
-                    <h4>Scratch</h4>
+                    <h4 data-i18n="langScratch">Scratch</h4>
                     <img src="images/scratch.png" alt="Scratch">
-                    <span class="level">Fresher</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
                 <div class="language-item">
-                    <h4>JavaScript</h4>
+                    <h4 data-i18n="langJavaScript">JavaScript</h4>
                     <img src="images/js.png" alt="JavaScript">
-                    <span class="level">Sophomore</span>
+                    <span class="level" data-i18n="levelFresher">Fresher</span>
                 </div>
             </div>
         </div>
@@ -210,13 +219,16 @@
 
     <section id="my-channels" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">My Channels</h2>
+            <h2 class="section-title" data-i18n="channel">Kênh</h2>
             <div class="channels-grid">
                 <a href="https://www.instagram.com/hnim_712/" target="_blank" class="channel-item">
                     <img src="images/instagram_icon.png" alt="Instagram">
                 </a>
-                <a href="https://www.tiktok.com/@dcminh712" target="_blank" class="channel-item">
+                <a href="https://www.tiktok.com/@dcminh712" target="_blank" class="channel-item" >
                     <img src="images/tiktok_icon.png" alt="TikTok">
+                </a>
+                <a href="https://tommydoan.github.io/portfoliotommydoan/" target="_blank" class="channel-item" >
+                    <img src="images/github.png" alt="GitHub">
                 </a>
             </div>
         </div>
@@ -224,35 +236,35 @@
 
     <section id="contact" class="contact-me-section section bg-light">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
+            <h2 class="section-title" data-i18n="contact">Liên Hệ</h2>
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Address</h3>
-                    <p>Can Tho City, VN</p>
+                    <h3 data-i18n="contactAddress">Địa Chỉ</h3>
+                    <p data-i18n="contactAddressInfo">TP. Cần Thơ, VN</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Contact Number</h3>
-                    <p>+84 917847649</p>
+                    <h3 data-i18n="contactPhone">Số Điện Thoại</h3>
+                    <p data-i18n="contactPhoneInfo">+84 917847649</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="far fa-envelope"></i>
                     </div>
-                    <h3>Email Address</h3>
-                    <p><a href="mailto:dntommy12@gmail.com">dntommy12@gmail.com</a></p>
+                    <h3 data-i18n="contactEmail">Địa Chỉ Email</h3>
+                    <p><a href="mailto:dntommy12@gmail.com" data-i18n="contactEmailLink">dntommy12@gmail.com</a></p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fab fa-facebook-f"></i>
                     </div>
-                    <h3>Facebook</h3>
-                    <p><a href="https://www.facebook.com/dcminh71205/" target="_blank">Đoàn Công Minh</a></p>
+                    <h3 data-i18n="contactFacebook">Facebook</h3>
+                    <p><a href="https://www.facebook.com/dcminh71205/" target="_blank" data-i18n="contactFacebookLink">Đoàn Công Minh</a></p>
                 </div>
             </div>
         </div>
@@ -260,7 +272,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Đoàn Công Minh. All rights reserved.</p>
+            <p data-i18n="footer">© 2025 All rights reserved | This template is made by Tommy Doan</p>
         </div>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
