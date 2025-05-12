@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
           expandButton.addEventListener('click', () => {
               const isExpanded = details.classList.contains('expanded'); // Use classList
               details.classList.toggle('expanded'); // Use classList.toggle
-              expandButton.textContent = isExpanded ? 'Thu gọn' : 'Xem chi tiết';
+              expandButton.textContent = isExpanded ? 'Xem chi tiết' : 'Thu gọn';
           });
       }
   });
