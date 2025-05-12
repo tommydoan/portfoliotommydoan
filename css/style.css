@@ -3,10 +3,12 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0b3d91; /* Xanh dương đậm hơn nữa, tạo nền sâu */
-    color: #f0f8ff; /* Màu trắng khói, dịu mắt hơn trên nền đậm */
+    /* Thay đổi màu nền mặc định thành màu sáng hơn */
+    background-color: #f0f8ff; /* Màu trắng khói, tạo cảm giác nhẹ nhàng */
+    color: #333; /* Màu chữ tối hơn để tương phản với nền sáng */
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Thêm transition cho mượt mà */
 }
 
 .container {
@@ -20,75 +22,286 @@ body {
 }
 
 .section-title {
-    font-size: 2.8em; /* Tiêu đề lớn hơn để thu hút sự chú ý */
-    color: #29b6f6; /* Xanh dương sáng, nổi bật trên nền đậm */
+    font-size: 2.8em;
+    color: #0b3d91; /* Màu xanh dương đậm hơn */
     text-align: center;
-    margin-bottom: 50px; /* Tăng khoảng cách dưới tiêu đề */
+    margin-bottom: 50px;
     position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ nhẹ */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Nhẹ hơn */
 }
 
 .section-title::after {
     content: "";
     position: absolute;
-    bottom: -15px; /* Dịch xuống một chút */
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 70px; /* Thanh gạch dài hơn */
-    height: 4px; /* Thanh gạch dày hơn */
-    background-color: #03a9f4; /* Xanh dương neon sáng hơn */
-    box-shadow: 0 0 5px #03a9f4; /* Thêm hiệu ứng phát sáng */
+    width: 70px;
+    height: 4px;
+    background-color: #29b6f6; /* Màu xanh dương sáng hơn */
+    box-shadow: 0 0 5px rgba(41, 182, 246, 0.5); /* Thêm độ trong suốt */
 }
 
 .button {
     display: inline-block;
-    padding: 14px 28px; /* Nút lớn hơn */
+    padding: 14px 28px;
     background-color: transparent;
-    color: #29b6f6; /* Chữ xanh dương sáng */
+    color: #0b3d91; /* Màu xanh dương đậm hơn */
     text-decoration: none;
-    border-radius: 10px; /* Góc bo tròn hơn */
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Thêm transition cho box-shadow */
-    font-size: 1.1em; /* Chữ nút lớn hơn */
-    border: 2px solid #29b6f6;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1em;
+    border: 2px solid #0b3d91; /* Màu xanh dương đậm hơn */
     cursor: pointer;
     font-weight: bold;
 }
 
 .button:hover {
-    background-color: rgba(41, 182, 246, 0.15); /* Overlay đậm hơn một chút */
-    transform: scale(1.08); /* Hiệu ứng phóng to rõ ràng hơn */
-    color: #03a9f4;
-    border-color: #03a9f4;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi hover */
+    background-color: rgba(11, 61, 145, 0.1); /* Màu xanh dương đậm hơn, trong suốt */
+    transform: scale(1.05); /* Nhẹ hơn */
+    color: #29b6f6;
+    border-color: #29b6f6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Nhẹ hơn */
 }
 
 .button.primary {
-    background-color: #29b6f6;
+    background-color: #0b3d91; /* Màu xanh dương đậm hơn */
     color: #ffffff;
-    border-color: #29b6f6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bóng đổ cho nút primary */
+    border-color: #0b3d91; /* Màu xanh dương đậm hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Nhẹ hơn */
 }
 
 .button.primary:hover {
-    background-color: #03a9f4; /* Màu hover đậm và neon hơn */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    background-color: #29b6f6;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Nhẹ hơn */
 }
 
 .button.secondary {
-    color: #03a9f4;
-    border-color: #03a9f4;
+    color: #29b6f6;
+    border-color: #29b6f6;
 }
 
 .button.secondary:hover {
     color: #ffffff;
-    background-color: rgba(3, 169, 244, 0.8); /* Nền xanh neon khi hover */
+    background-color: rgba(41, 182, 246, 0.8);
 }
+
+.settings-buttons {
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #333; /* Màu tối hơn */
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+#language-toggle {
+    background: none;
+    border: 1px solid #333; /* Màu tối hơn */
+    color: #333; /* Màu tối hơn */
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#language-toggle span {
+    padding: 0 5px;
+}
+
+#language-toggle span.active {
+    font-weight: bold;
+}
+
+/* --- Dark Mode --- */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: rgba(18, 18, 18, 0.9);
+    box-shadow: 0 3px 12px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+}
+
+body.dark-mode header nav ul li a {
+    color: #e0e0e0; /* Màu chữ sáng cho nav */
+}
+
+body.dark-mode header nav ul li a:hover,
+body.dark-mode header nav ul li a.active {
+    color: #03a9f4; /* Màu hover sáng hơn */
+}
+
+body.dark-mode .section {
+    background-color: #222;
+}
+
+body.dark-mode .section.bg-light {
+    background-color: #212121;
+}
+
+body.dark-mode .section-title {
+    color: #03a9f4; /* Giữ nguyên màu tiêu đề */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Tăng độ đậm bóng đổ */
+}
+
+body.dark-mode .section-title::after {
+    background-color: #29b6f6;
+    box-shadow: 0 0 5px rgba(41, 182, 246, 0.7); /* Tăng độ sáng bóng đổ */
+}
+
+body.dark-mode #about {
+    background-color: #1e1e1e; /* Màu nền tối hơn cho About */
+}
+
+body.dark-mode #about .about-text {
+    color: #e0e0e0; /* Màu chữ sáng cho About */
+}
+
+body.dark-mode #projects {
+    background-color: #1e1e1e; /* Màu nền tối hơn cho skills-education */
+}
+
+body.dark-mode .project-item {
+    background-color: #333; /* Màu nền tối hơn cho project item */
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+}
+
+body.dark-mode .project-info h4 {
+    color: #03a9f4; /* Màu tiêu đề dự án */
+}
+
+body.dark-mode .project-info .tech {
+    color: #bbdefb; /* Màu chữ công nghệ */
+}
+
+body.dark-mode .project-info .expand-button {
+    color: #29b6f6;
+    border-color: #29b6f6;
+}
+
+body.dark-mode .project-info .expand-button:hover {
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background-color: rgba(41, 182, 246, 0.2); /* Màu nền hover */
+}
+
+body.dark-mode .project-details {
+    background-color: #444; /* Màu nền tối hơn cho details */
+    border-top-color: #03a9f4;
+    color: #e0e0e0;
+}
+
+body.dark-mode #skills-education {
+    background-color: #1e1e1e; /* Màu nền tối hơn cho skills-education */
+}
+
+body.dark-mode .education-section,
+body.dark-mode .skills-section {
+    background-color: #252525; /* Màu nền tối hơn */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+}
+
+body.dark-mode .education-section h3,
+body.dark-mode .skills-section h3 {
+    color: #03a9f4;
+}
+
+body.dark-mode .education-item {
+    background-color: #333; /* Màu nền tối hơn */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+    color: #e0e0e0;
+}
+
+body.dark-mode .education-item h4,
+body.dark-mode .education-item .degree {
+    color: #29b6f6;
+}
+
+body.dark-mode .education-item .details {
+    color: #bbdefb;
+}
+
+body.dark-mode .skill-list li {
+    background-color: #333; /* Màu nền tối hơn */
+    color: #e0e0e0;
+}
+
+body.dark-mode .skill-list li span {
+    color: #81c784; /* Màu check sáng hơn */
+}
+
+body.dark-mode #programming-languages {
+    background-color: #1e1e1e; /* Màu nền tối hơn */
+}
+
+body.dark-mode .language-item {
+    background-color: #333; /* Màu nền tối hơn */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+    color: #e0e0e0;
+}
+
+body.dark-mode .language-item h4 {
+    color: #03a9f4;
+}
+
+body.dark-mode .language-item .level {
+    color: #bbdefb;
+}
+
+body.dark-mode #my-channels {
+    background-color: #1e1e1e; /* Màu nền tối hơn */
+}
+
+body.dark-mode .channel-item {
+    background-color: #333; /* Màu nền tối hơn */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+    color: #e0e0e0;
+}
+
+body.dark-mode #contact {
+    background-color: #1e1e1e; /* Màu nền tối hơn */
+}
+
+body.dark-mode .contact-card {
+    background-color: #333; /* Màu nền tối hơn */
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+    color: #e0e0e0;
+}
+
+body.dark-mode .contact-card h3 {
+    color: #03a9f4;
+}
+
+body.dark-mode .contact-card p,
+body.dark-mode .contact-card a {
+    color: #bbdefb;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+    color: #e0e0e0;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.1); /* Bóng đổ sáng hơn */
+}
+
+body.dark-mode #theme-toggle,
+body.dark-mode #language-toggle {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+}
+
 
 /* Header */
 header {
-    background-color: rgba(11, 61, 145, 0.9); /* Nền header đậm hơn và trong suốt hơn một chút */
-    padding: 25px 0; /* Tăng padding */
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3); /* Bóng đổ đậm hơn */
+    background-color: #00ffffba; /* Màu nền sáng hơn, trong suốt */
+    padding: 25px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ hơn */
     position: fixed;
     top: 0;
     left: 0;
@@ -101,32 +314,32 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px; /* Tăng padding ngang */
+    padding: 0 30px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: 2em; /* Logo lớn hơn */
-    color: #03a9f4; /* Xanh dương neon cho logo */
+    font-size: 2em;
+    color: #0b3d91; /* Màu xanh dương đậm hơn */
     text-decoration: none;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Thêm bóng đổ cho logo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Nhẹ hơn */
 }
 
 .logo-icon {
     display: inline-flex;
-    justify-content: center; /* Căn giữa icon */
+    justify-content: right;
     align-items: center;
-    width: 40px; /* Icon lớn hơn */
-    height: 40px; /* Icon lớn hơn */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #29b6f6; /* Xanh dương sáng cho nền icon */
+    background-color: #29b6f6;
     color: #ffffff;
-    font-size: 1.4em; /* Chữ trong icon lớn hơn */
+    font-size: 1.4em;
     font-weight: bold;
-    margin-right: 10px; /* Tăng khoảng cách */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ cho icon */
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(41, 182, 246, 0.5); /* Thêm độ trong suốt */
 }
 
 header nav ul {
@@ -134,23 +347,20 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 30px; /* Tăng khoảng cách giữa các mục menu */
+    gap: 30px;
 }
 
 header nav ul li a {
-    color: #e1f5fe; /* Xanh nhạt hơn, dễ đọc trên nền đậm */
+    color: #0b3d91; /* Màu xanh dương đậm hơn */
     text-decoration: none;
-    padding: 12px 18px; /* Padding lớn hơn cho các mục menu */
-    border-radius: 10px; /* Góc bo tròn hơn */
-    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Thêm transition */
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover,
 header nav ul li a.active {
-    color: #03a9f4; /* Xanh dương neon khi hover/active */
-    font-weight: bold;
-    background-color: rgba(3, 169, 244, 0.1); /* Thêm nền nhẹ khi hover/active */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+    color: #29b6f6;
 }
 
 /* Hero Section */
@@ -279,7 +489,7 @@ header nav ul li a.active {
 /* About Section */
 #about {
     padding: 80px 0; /* Tăng padding */
-    background-color: #1e3a8a; /* Xanh dương đậm hơn cho About */
+    background-color: #00FFFF; /* Xanh dương đậm hơn cho About */
 }
 
 #about .container {
@@ -327,7 +537,7 @@ header nav ul li a.active {
 
 #about .about-text {
     flex: 1;
-    color: #f0f8ff; /* Màu trắng khói */
+    color: #03a9f4; /* Màu trắng khói */
 }
 
 #about .about-text p {
@@ -368,223 +578,230 @@ header nav ul li a.active {
 
 /* Projects Section */
 #projects {
-    padding: 80px 0; /* Tăng padding */
-    background-color: #152850; /* Nền đậm hơn */
+    padding: 60px 0;
+    background-color: #00FFFF; /* Màu nền giống với #skills-education */
+}
+
+#projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#projects .section-title {
+    font-size: 2.5em;
+    color: #03a9f4; /* Màu tiêu đề tương tự */
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 #projects .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Item rộng hơn một chút */
-    gap: 35px; /* Tăng khoảng cách */
-    margin-top: 40px; /* Tăng margin top */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .project-item {
-    background-color: #1e3a8a; /* Nền đậm hơn */
-    border-radius: 12px; /* Góc bo tròn hơn */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Bóng đổ đậm hơn */
+    background-color: #424757b1; /* Màu nền giống với .education-section */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    }
-    
-    .project-item:hover {
-    transform: translateY(-8px); /* Nổi lên rõ ràng hơn /
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); / Bóng đổ đậm hơn khi hover */
-    }
-    
-    .project-image {
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
     width: 100%;
-    height: 280px; /* Chiều cao ảnh lớn hơn */
+    height: 250px;
     background-size: cover;
     background-position: center;
     border-radius: 12px 12px 0 0;
     transition: transform 0.3s ease-in-out;
-    }
-    
-    .project-item:hover .project-image {
-    transform: scale(1.08); /* Phóng to ảnh khi hover */
-    }
-    
-    .project-info {
-    padding: 30px; /* Tăng padding /
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
-    color: #f0f8ff; / Màu trắng khói */
-    }
-    
-    .project-info h4 {
-    font-size: 1.7em; /* Tiêu đề dự án lớn hơn /
-    margin-bottom: 12px;
-    color: #03a9f4; / Tiêu đề dự án màu xanh dương neon /
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); / Thêm bóng đổ */
-    }
-    
-    .project-info .tech {
-    color: #e1f5fe; /* Xanh nhạt hơn /
-    margin-bottom: 18px; / Tăng khoảng cách */
-    font-size: 1em;
-    }
-    
-    .project-info .expand-button {
+    color: #f0f8ff; /* Màu chữ chính */
+}
+
+.project-info h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #03a9f4; /* Màu tiêu đề dự án */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.project-info .tech {
+    color: #e1f5fe; /* Màu chữ công nghệ */
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.project-info .expand-button {
     align-self: flex-start;
     background-color: transparent;
-    color: #29b6f6;
+    color: #29b6f6; /* Màu nút */
     text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Thêm box-shadow /
-    font-size: 1.1em; / Nút lớn hơn /
     border: 2px solid #29b6f6;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em;
     cursor: pointer;
     font-weight: bold;
-    padding: 12px 20px; / Padding lớn hơn */
-    }
-    
-    .project-info .expand-button:hover {
+}
+
+.project-info .expand-button:hover {
     background-color: rgba(41, 182, 246, 0.15);
-    transform: scale(1.08);
+    transform: scale(1.05);
     color: #03a9f4;
     border-color: #03a9f4;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ khi hover */
-    }
-    
-    .project-info .expand-button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-info .expand-button:active {
     transform: translateY(-2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .project-info .expand-button:active {
-    transform: translateY(0);
-    box-shadow: none;
-    }
-    
-    .project-details {
+}
+
+.project-details {
     display: none;
-    padding: 30px; /* Tăng padding /
-    background-color: #1a237e; / Nền đậm hơn /
-    border-top: 2px solid #29b6f6; / Đường viền trên nổi bật hơn /
+    padding: 25px;
+    background-color: #424757b1; /* Màu nền giống với #projects */
+    border-top: 2px solid #29b6f6;
     border-radius: 0 0 12px 12px;
-    font-size: 1em;
-    color: #e1f5fe; / Màu nhạt hơn /
-    line-height: 1.8;
+    font-size: 0.9em;
+    color: #e1f5fe;
+    line-height: 1.6;
     opacity: 0;
-    transform: translateY(-15px); / Trượt lên nhiều hơn */
+    transform: translateY(-10px);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    }
-    
-    .project-details.expanded {
+}
+
+.project-details.expanded {
     display: block;
     opacity: 1;
     transform: translateY(0);
-    }
-    .project-details ul {
+}
+
+.project-details ul {
     list-style: disc;
-    margin-left: 25px; /* Tăng khoảng cách lề trái /
+    margin-left: 20px;
     padding-left: 0;
-    margin-bottom: 20px; / Tăng khoảng cách dưới danh sách */
-    }
-    .project-details li {
-        margin-bottom: 10px; /* Tăng khoảng cách giữa các mục */
-    }
+    margin-bottom: 15px;
+}
+
+.project-details li {
+    margin-bottom: 8px;
+}
     
     /* Skills & Education Section */
-    #skills-education {
-        padding: 80px 0; /* Tăng padding */
-        background-color: #1a237e; /* Nền đậm hơn */
-    }
-    
-    #skills-education .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px; /* Tăng khoảng cách */
-    }
-    
-    #skills-education .skills-education-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Item rộng hơn */
-        gap: 40px; /* Tăng khoảng cách */
-        width: 100%;
-        max-width: 1000px; /* Tăng chiều rộng tối đa */
-    }
-    
-    .education-list,
-    .other-skills {
-        background-color: #1e3a8a; /* Nền đậm hơn */
-        border-radius: 12px; /* Góc bo tròn hơn */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Bóng đổ đậm hơn */
-        padding: 40px; /* Tăng padding */
-        width: 100%;
-        color: #f0f8ff; /* Màu trắng khói */
-    }
-    
-    .education-list h3,
-    .other-skills h3 {
-        font-size: 1.7em; /* Tiêu đề lớn hơn */
-        color: #03a9f4; /* Tiêu đề màu xanh dương neon */
-        margin-bottom: 25px; /* Tăng khoảng cách */
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ */
-    }
-    
-    .education-item {
-        margin-bottom: 25px; /* Tăng khoảng cách */
-        padding-bottom: 25px; /* Tăng padding dưới */
-        border-bottom: 1px solid #29b6f6; /* Đường kẻ dưới nổi bật hơn */
-    }
-    
-    .education-item:last-child {
-        border-bottom: none;
-    }
-    
-    .education-item h4 {
-        font-size: 1.3em; /* Tiêu đề nhỏ hơn lớn hơn */
-        color: #29b6f6; /* Màu xanh dương sáng hơn */
-        margin-bottom: 10px;
-        font-weight: bold; /* In đậm */
-    }
-    
-    .education-item .degree {
-        font-weight: bold;
-        color: #e1f5fe; /* Màu nhạt hơn */
-        margin-bottom: 10px;
-        font-size: 1.1em; /* Lớn hơn một chút */
-    }
-    
-    .education-item .details {
-        color: #bbdefb;
-        line-height: 1.6; /* Tăng line-height */
-    }
-    
-    .other-skills .skill-list {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .other-skills .skill-list li {
-        padding: 12px 0; /* Tăng padding */
-        color: #f0f8ff; /* Màu trắng khói */
-        position: relative;
-        padding-left: 30px; /* Tăng khoảng cách để "✔" không bị sát chữ */
-        font-size: 1.1em; /* Chữ lớn hơn */
-    }
-    
-    .other-skills .skill-list li::before {
-        content: "✔";
-        color: #4caf50; /* Màu xanh lá cây tươi (tạo điểm nhấn) */
-        position: absolute;
-        left: 0;
-        top: 12px; /* Căn chỉnh dọc */
-        font-size: 1.2em; /* Biểu tượng lớn hơn */
-    }
+#skills-education {
+    background-color: #00FFFF;
+    padding: 50px 0; /* Giảm padding tổng thể của section */
+}
+
+#skills-education .section-title {
+    text-align: center; /* Đảm bảo tiêu đề section được căn giữa */
+    margin-bottom: 40px; /* Giảm khoảng cách từ tiêu đề đến nội dung */
+}
+
+#skills-education .section-content {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi không đủ không gian */
+    justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+    align-items: flex-start; /* Căn các phần tử lên đầu theo chiều dọc */
+    gap: 30px; /* Khoảng cách giữa các phần tử con */
+}
+
+.education-section,
+.skills-section {
+    width: clamp(300px, 45%, 500px); /* Kích thước linh hoạt, tối thiểu 300px, ưu tiên 45% chiều rộng cha, tối đa 500px */
+    padding: 20px; /* Giảm padding bên trong các section con */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước phần tử */
+    margin-bottom: 20px; /* Khoảng cách giữa các section con */
+}
+
+.education-section h3,
+.skills-section h3 {
+    text-align: center; /* Căn giữa tiêu đề của từng section con */
+    font-size: 1.3em; /* Giảm kích thước tiêu đề */
+    margin-bottom: 15px; /* Giảm khoảng cách từ tiêu đề đến nội dung */
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Chỉ một cột */
+    gap: 15px; /* Khoảng cách giữa các mục học vấn */
+}
+
+.education-item {
+    border-radius: 12px; /* Góc bo tròn hơn */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bóng đổ đậm hơn */
+    padding: 25px; /* Tăng padding */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Thêm box-shadow */
+    color: #03a9f4; /* Màu trắng khói */
+    background-color: #424757b1;
+    padding-bottom: 15px; /* Giảm padding dưới của mỗi mục */
+    margin-bottom: 15px; /* Giảm margin dưới của mỗi mục */
+}
+
+.education-item:last-child {
+    border-bottom: none; /* Loại bỏ đường kẻ ở mục cuối cùng */
+}
+
+.education-item h4 {
+    font-size: 1.1em; /* Giảm kích thước tiêu đề mục */
+    margin-bottom: 5px; /* Giảm khoảng cách */
+}
+
+.education-item p {
+    font-size: 0.9em; /* Giảm kích thước chữ nội dung */
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Các cột kỹ năng */
+    gap: 10px;
+}
+
+.skill-list li {
+    color: #03a9f4;
+    font-size: 0.9em; /* Giảm kích thước chữ kỹ năng */
+    padding: 8px 12px; /* Giảm padding trong mục kỹ năng */
+    background-color: #424757b1; /* Màu nền nhẹ nhàng cho kỹ năng */
+    border-radius: 20px; /* Bo tròn các góc */
+    margin-bottom: 5px;
+}
+
+.skill-list li span {
+    margin-right: 5px;
+    color: #4CAF50; /* Màu cho dấu check */
+}
+
     
     /* Programming Languages Section */
     #programming-languages {
         padding: 80px 0; /* Tăng padding */
-        background-color: #152850; /* Nền đậm hơn */
+        background-color: #00FFFF; /* Nền đậm hơn */
     }
     
     #programming-languages .container {
@@ -620,7 +837,7 @@ header nav ul li a.active {
     }
     
     .language-item {
-        background-color: #1e3a8a; /* Nền đậm hơn */
+        background-color: #424757b1; /* Nền đậm hơn */
         border-radius: 12px; /* Góc bo tròn hơn */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bóng đổ đậm hơn */
         padding: 25px; /* Tăng padding */
@@ -655,7 +872,7 @@ header nav ul li a.active {
     /* My Channels Section */
     #my-channels {
         padding: 80px 0; /* Tăng padding */
-        background-color: #1a237e; /* Nền đậm hơn */
+        background-color: #00FFFF; /* Nền đậm hơn */
     }
     
     #my-channels .container {
@@ -681,7 +898,11 @@ header nav ul li a.active {
     }
     
     .channel-item {
+        background-color: #424757b1; /* Nền đậm hơn */
+        border-radius: 12px; /* Góc bo tròn hơn */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bóng đổ đậm hơn */
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Thêm box-shadow */
+        color: #f0f8ff; /* Màu trắng khói */
     }
     
     .channel-item:hover {
@@ -699,7 +920,7 @@ header nav ul li a.active {
     /* Contact Me Section */
     #contact {
         padding: 80px 0; /* Tăng padding */
-        background-color: #152850; /* Nền đậm hơn */
+        background-color: #00FFFF; /* Nền đậm hơn */
     }
     
     #contact .container {
@@ -718,66 +939,99 @@ header nav ul li a.active {
         box-shadow: 0 0 5px #03a9f4; /* Thêm phát sáng */
     }
     
+   #contact .contact-grid {
+    display: flex; /* Thay vì grid, sử dụng flexbox */
+    flex-direction: row; /* Sắp xếp các phần tử theo hàng ngang */
+    justify-content: space-between; /* Chia đều khoảng cách giữa các ô */
+    align-items: stretch; /* Các ô có chiều cao bằng nhau */
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px; /* Thêm khoảng cách giữa các phần tử */
+}
+
+.contact-card {
+    background-color: #424757b1;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: #f0f8ff;
+    display: flex; /* Để căn chỉnh nội dung bên trong mỗi ô */
+    flex-direction: column;
+    justify-content: space-between; /* Chia đều khoảng cách giữa các phần tử con */
+    min-height: 200px;  /* Đặt chiều cao tối thiểu */
+    flex: 1; /* Các ô có kích thước linh hoạt và lấp đầy khoảng trống */
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-icon {
+    background-color: #29b6f6;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #03a9f4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card p {
+    color: #bbdefb;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+.contact-card a {
+    color: #29b6f6;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #03a9f4;
+    text-decoration: underline;
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
     .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Card rộng hơn */
-        gap: 35px; /* Tăng khoảng cách */
-        margin-top: 40px; /* Tăng margin top */
-        width: 100%;
-        max-width: 1000px; /* Tăng chiều rộng tối đa */
+        flex-direction: column; /* Chuyển về bố cục cột trên màn hình nhỏ */
     }
-    
-    .contact-card {
-        background-color: #1e3a8a; /* Nền đậm hơn */
-        border-radius: 12px; /* Góc bo tròn hơn */
-        padding: 35px; /* Tăng padding */
-        text-align: center;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Bóng đổ đậm hơn */
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Thêm box-shadow */
-        color: #f0f8ff; /* Màu trắng khói */
-    }
-    
-    .contact-card:hover {
-        transform: translateY(-8px); /* Nổi lên rõ hơn */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Bóng đổ đậm hơn khi hover */
-    }
-    
+}
+
+/* Nếu bạn muốn các icon và chữ nhỏ hơn nữa trên mobile */
+@media (max-width: 480px) {
     .contact-icon {
-        background-color: #29b6f6; /* Màu xanh dương sáng hơn */
-        color: #ffffff;
-        width: 70px; /* Icon lớn hơn */
-        height: 70px; /* Icon lớn hơn */
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em; /* Icon lớn hơn /
-        margin: 0 auto 25px; / Tăng khoảng cách /
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); / Thêm bóng đổ */
-        }
-        .contact-card h3 {
-            font-size: 1.5em; /* Tiêu đề lớn hơn */
-            margin-bottom: 12px;
-            color: #03a9f4; /* Tiêu đề màu xanh dương neon */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ */
-        }
-        
-        .contact-card p {
-            color: #bbdefb;
-            font-size: 1.1em; /* Chữ lớn hơn */
-            margin-bottom: 0;
-        }
-        
-        .contact-card a {
-            color: #29b6f6; /* Màu xanh dương sáng hơn cho link */
-            text-decoration: none;
-            transition: color 0.3s ease, text-decoration 0.3s ease; /* Thêm transition cho underline */
-        }
-        
-        .contact-card a:hover {
-            color: #03a9f4;
-            text-decoration: underline;
-        }
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+    .contact-card h3 {
+        font-size: 1em;
+    }
+    .contact-card p {
+        font-size: 0.8em;
+    }
+     .contact-card {
+        padding: 15px;
+    }
+}
         
         /* Footer */
         footer {
@@ -865,37 +1119,122 @@ header nav ul li a.active {
                 transform: translateX(0);
             }
         
-            #projects .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 25px; /* Giảm gap */
-            }
-        
-            #skills-education .container {
-                align-items: stretch;
-            }
-        
-            .skills-education-grid {
-                grid-template-columns: 1fr;
-                max-width: 100%;
-                gap: 30px; /* Giảm gap */
-            }
-        
-            .education-list h3,
-            .other-skills h3 {
-                text-align: left;
-                font-size: 1.5em; /* Nhỏ hơn */
-                margin-bottom: 20px; /* Giảm margin */
-            }
-        
-            .other-skills .skill-list li {
-                font-size: 1em; /* Nhỏ hơn */
-                padding-left: 25px; /* Giảm padding left */
-            }
-        
-            .other-skills .skill-list li::before {
-                font-size: 1em; /* Nhỏ hơn */
-                top: 10px; /* Điều chỉnh lại */
-            }
+#skills-education {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* Để căn giữa khối cha */
+}
+
+.education-section {
+    background-color: #1e3a8a;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    color: #f0f8ff;
+    margin-bottom: 20px; /* Thêm khoảng cách giữa 2 section */
+}
+
+.education-section h3{
+    font-size: 1.5em;
+    color: #03a9f4;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.education-item {
+    flex: 1;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.education-item h4 {
+    font-size: 1.1em;
+    color: #29b6f6;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.education-item .degree {
+    font-weight: bold;
+    color: #e1f5fe;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.education-item .details {
+    color: #bbdefb;
+    line-height: 1.6;
+    font-size: 0.9em;
+}
+
+.skills-section {
+    background-color: #1e3a8a;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    color: #f0f8ff;
+    margin-bottom: 20px;
+}
+
+.skills-section h3 {
+    font-size: 1.5em;
+    color: #03a9f4;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.skills-section .skill-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-section .skill-list li {
+    padding: 10px 0;
+    color: #f0f8ff;
+    position: relative;
+    padding-left: 25px;
+    font-size: 1em;
+}
+
+.skills-section .skill-list li::before {
+    content: "✔";
+    color: #4caf50;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .education-grid {
+        flex-direction: column;
+    }
+}
+
+
         
             #programming-languages .language-grid {
                 grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Nhỏ hơn */
