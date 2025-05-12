@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoàn Công Minh - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Images/Logo.png">
+    <script src="https://kit.fontawesome.com/de270889e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">T</span>
+                <span class="logo-text">ommy Doan</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills-education">Skills & Education</a></li>
+                    <li><a href="#programming-languages">Programming Languages</a></li>
+                    <li><a href="#my-channels">My Channels</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
+        <div class="tech-line"></div>
+
+        <div class="particle" style="--x: 10px; --y: 20px;"></div>
+        <div class="particle" style="--x: -15px; --y: 5px;"></div>
+        <div class="particle" style="--x: 5px; --y: -25px;"></div>
+
+        <h1>Đoàn Công Minh</h1>
+        <p class="subheading">Web Developer & Hardware Enthusiast</p>
+        <p class="description">Sinh viên IT năng động, đam mê giải quyết vấn đề và khám phá công nghệ.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="button primary">Xem dự án</a>
+            <a href="#about" class="button secondary">Tìm hiểu thêm</a>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <h2 id="about-title" class="section-title">Về tôi</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/avt1.jpg" alt="Hình ảnh của Đoàn Công Minh">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <p>Xin chào! Tôi là Đoàn Công Minh, một sinh viên năm 2 chuyên ngành Công nghệ Thông tin tại Đại học Nam Cần Thơ. Tôi có niềm đam mê đặc biệt với lĩnh vực phát triển web và khám phá thế giới phần cứng. Tôi luôn tìm kiếm những thử thách mới để rèn luyện kỹ năng và áp dụng kiến thức đã học vào các dự án thực tế.</p>
+                    <p>Trong lĩnh vực phát triển web, tôi tập trung vào việc xây dựng các trang web hiện đại, responsive và thân thiện với người dùng. Tôi có kiến thức về HTML, CSS, JavaScript và đang học hỏi thêm về các framework và thư viện phổ biến.</p>
+                    <p>Đối với phần cứng, tôi thích tìm hiểu về cách các thiết bị hoạt động, mày mò với Arduino và các dự án điện tử sáng tạo khác. Sự kết hợp giữa phần mềm và phần cứng mang đến cho tôi những ý tưởng độc đáo và thú vị.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Dự án</h2>
+            <div class="projects-grid">
+                <div class="project-item" data-aos="fade-left">
+                    <div class="project-image" style="background-image: url('images/pcb.jpg');"></div>
+                    <div class="project-info">
+                        <h4>Printed Circuit Board</h4>
+                        <p class="tech">Proteus</p>
+                        <button class="button small expand-button">Xem chi tiết</button>
+                    </div>
+                    <div class="project-details">
+                        <p>Đây là mô tả chi tiết về nền tảng thương mại điện tử này.</p>
+                        <ul>
+                            <li>Thiết kế và chế tạo bảng:</li>
+                            <li>Bảng treo quần áo tự động có cảm biến ánh sáng</li>
+                            <li>Bảng đèn nháy kiểu cảnh sát</li>
+                            <li>Bảng khuếch đại âm thanh</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="project-image" style="background-image: url('images/dogcar.jpg');"></div>
+                    <div class="project-info">
+                        <h4>Dog Carbot</h4>
+                        <p class="tech">C++, Arduino, AutoCAD, CorelDraw</p>
+                        <button class="button small expand-button">Xem chi tiết</button>
+                    </div>
+                    <div class="project-details">
+                        <p>Đây là mô tả chi tiết về robot Dog Carbot.</p>
+                        <ul>
+                            <li>Bộ vi điều khiển: Arduino Mega</li>
+                            <li>Firmware: lập trình C++ cho Arduino Uno R3, sử dụng HC 05 để kết nối điện thoại di động qua bluetooth, bánh xe mecanum giúp xe di chuyển nhẹ nhàng</li>
+                            <li>Sofware: sử dụng ứng dụng trên CH Play "Bluetooth RC Car"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="project-image" style="background-image: url('images/smartcan.jpg');"></div>
+                    <div class="project-info">
+                        <h4>Smart Trash Can</h4>
+                        <p class="tech">Arduino, C++, Sensors</p>
+                        <button class="button small expand-button">Xem chi tiết</button>
+                    </div>
+                    <div class="project-details">
+                        <p>Đây là mô tả chi tiết về thùng rác thông minh.</p>
+                        <ul>
+                            <li>Cảm biến khoảng cách: có thể phát hiện người trong phạm vi 20cm và tự động mở nắp</li>
+                            <li>Cơ cấu phân loại: có chức năng báo đầy rác</li>
+                            <li>Tiện ích: có loa tuyên truyền bảo vệ môi trường</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills-education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills & Education</h2>
+            <div class="skills-education-grid">
+                <div class="education-list">
+                    <h3>Education</h3>
+                    <div class="education-item" data-aos="fade-up">
+                        <h4>Nam Can Tho University</h4>
+                        <p class="degree">Information Technology Engineer (2022 - Present)</p>
+                        <p class="details">Faculty of Information and Communication Technology</p>
+                    </div>
+                    <div class="education-item" data-aos="fade-up" data-aos-delay="100">
+                        <h4>B1 Certificate</h4>
+                        <p class="degree">Issued by Can Tho University (2025)</p>
+                        <p class="details">A certificate indicating English language proficiency at level B1.</p>
+                    </div>
+                    <div class="education-item" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Excellent Soft Skills Certificate</h4>
+                        <p class="degree">Issued by Nam Can Tho University (2025)</p>
+                    </div>
+                </div>
+
+                <div class="other-skills">
+                    <h3>Skills</h3>
+                    <ul class="skill-list">
+                        <li>Reading Datasheet</li>
+                        <li>Register Definition</li>
+                        <li>Bootloader</li>
+                        <li>Team work</li>
+                        <li>Process Working</li>
+                        <li>Communication Skills</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programming-languages" class="section bg-light">
+        <div class="container">
+            <h2 class="programming-languages-title">Programming Languages</h2>
+            <div class="language-grid">
+                <div class="language-item">
+                    <h4>C++</h4>
+                    <img src="images/c++.png" alt="C++">
+                    <span class="level">Sophomore</span>
+                </div>
+                <div class="language-item">
+                    <h4>React</h4>
+                    <img src="images/react.png" alt="React">
+                    <span class="level">Sophomore</span>
+                </div>
+                <div class="language-item">
+                    <h4>React Native</h4>
+                    <img src="images/reactnative.png" alt="React Native">
+                    <span class="level">Sophomore</span>
+                </div>
+                <div class="language-item">
+                    <h4>Python</h4>
+                    <img src="images/python.png" alt="Python">
+                    <span class="level">Fresher</span>
+                </div>
+                <div class="language-item">
+                    <h4>HTML</h4>
+                    <img src="images/html.png" alt="HTML">
+                    <span class="level">Sophomore</span>
+                </div>
+                <div class="language-item">
+                    <h4>MySQL</h4>
+                    <img src="images/mysql.png" alt="MySQL">
+                    <span class="level">Sophomore</span>
+                </div>
+                <div class="language-item">
+                    <h4>Scratch</h4>
+                    <img src="images/scratch.png" alt="Scratch">
+                    <span class="level">Fresher</span>
+                </div>
+                <div class="language-item">
+                    <h4>JavaScript</h4>
+                    <img src="images/js.png" alt="JavaScript">
+                    <span class="level">Sophomore</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="my-channels" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">My Channels</h2>
+            <div class="channels-grid">
+                <a href="https://www.instagram.com/hnim_712/" target="_blank" class="channel-item">
+                    <img src="images/instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@dcminh712" target="_blank" class="channel-item">
+                    <img src="images/tiktok_icon.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-me-section section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Can Tho City, VN</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Contact Number</h3>
+                    <p>+84 917847649</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <h3>Email Address</h3>
+                    <p><a href="mailto:dntommy12@gmail.com">dntommy12@gmail.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p><a href="https://www.facebook.com/dcminh71205/" target="_blank">Đoàn Công Minh</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Đoàn Công Minh. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
