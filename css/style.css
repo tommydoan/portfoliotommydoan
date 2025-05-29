@@ -299,7 +299,7 @@ body.dark-mode #language-toggle {
 
 /* Header */
 header {
-    background-color: #00ffffba; /* Màu nền sáng hơn, trong suốt */
+    background-color: #f0f8ff; /* Màu nền sáng hơn, trong suốt */
     padding: 25px 0;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ hơn */
     position: fixed;
@@ -365,7 +365,7 @@ header nav ul li a.active {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0b3d91, #151b54); /* Gradient sâu hơn */
+    background: linear-gradient(135deg, #696969, #808080); /* Graient sâu hơn */
     text-align: center;
     padding: 200px 0; /* Tăng padding */
     position: relative;
@@ -376,8 +376,8 @@ header nav ul li a.active {
     font-family: 'Rajdhani', sans-serif;
     font-size: 5em; /* Tiêu đề chính lớn hơn */
     margin-bottom: 15px;
-    color: #03a9f4; /* Xanh dương neon nổi bật */
-    text-shadow: 0 0 15px #03a9f4, 0 0 30px #03a9f4, 3px 3px 8px rgba(0, 0, 0, 0.6); /* Hiệu ứng neon mạnh hơn */
+    color: #1E90FF; /* Xanh dương neon nổi bật */
+    text-shadow: 0 0 15px #1E90FF, 0 0 30px #1E90FF, 3px 3px 8px rgba(0, 0, 0, 0.6); /* Hiệu ứng neon mạnh hơn */
     letter-spacing: 0.15em;
     animation: fadeInUp 1s ease-in-out, glitch 0.8s infinite alternate;
 }
@@ -385,7 +385,7 @@ header nav ul li a.active {
 .hero .subheading {
     font-family: 'Ubuntu Mono', monospace;
     font-size: 1.8em; /* Subheading lớn hơn */
-    color: #29b6f6; /* Xanh dương sáng */
+    color: #4682B4; /* Xanh dương sáng */
     margin-bottom: 20px;
     animation: fadeInUp 1.2s ease-in-out 0.2s forwards;
     opacity: 0;
@@ -395,7 +395,7 @@ header nav ul li a.active {
 .hero .description {
     font-family: 'Source Code Pro', monospace;
     font-size: 1.1em; /* Description lớn hơn */
-    color: #bbdefb;
+    color: #F0F8FF;
     margin-bottom: 40px;
     animation: fadeInUp 1.4s ease-in-out 0.4s forwards;
     opacity: 0;
@@ -489,7 +489,7 @@ header nav ul li a.active {
 /* About Section */
 #about {
     padding: 80px 0; /* Tăng padding */
-    background-color: #00FFFF; /* Xanh dương đậm hơn cho About */
+    background-color: #f0f8ff; /* Xanh dương đậm hơn cho About */
 }
 
 #about .container {
@@ -579,7 +579,7 @@ header nav ul li a.active {
 /* Projects Section */
 #projects {
     padding: 60px 0;
-    background-color: #00FFFF; /* Màu nền giống với #skills-education */
+    background-color: #f0f8ff; /* Màu nền giống với #skills-education */
 }
 
 #projects .container {
@@ -712,7 +712,7 @@ header nav ul li a.active {
     
     /* Skills & Education Section */
 #skills-education {
-    background-color: #00FFFF;
+    background-color: #f0f8ff;
     padding: 50px 0; /* Giảm padding tổng thể của section */
 }
 
@@ -801,7 +801,7 @@ header nav ul li a.active {
     /* Programming Languages Section */
     #programming-languages {
         padding: 80px 0; /* Tăng padding */
-        background-color: #00FFFF; /* Nền đậm hơn */
+        background-color: #f0f8ff; /* Nền đậm hơn */
     }
     
     #programming-languages .container {
@@ -872,7 +872,7 @@ header nav ul li a.active {
     /* My Channels Section */
     #my-channels {
         padding: 80px 0; /* Tăng padding */
-        background-color: #00FFFF; /* Nền đậm hơn */
+        background-color: #f0f8ff; /* Nền đậm hơn */
     }
     
     #my-channels .container {
@@ -920,7 +920,7 @@ header nav ul li a.active {
     /* Contact Me Section */
     #contact {
         padding: 80px 0; /* Tăng padding */
-        background-color: #00FFFF; /* Nền đậm hơn */
+        background-color: #f0f8ff; /* Nền đậm hơn */
     }
     
     #contact .container {
